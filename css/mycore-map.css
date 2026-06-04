@@ -1,0 +1,326 @@
+.mycore-map-wrap {
+    width: 100vw;
+    position: relative;
+    left: calc(-50vw + 50%);
+    font-family: inherit;
+}
+
+.mycore-map-filters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* center horizontally */
+    align-items: center;
+    gap: 8px;
+    padding: 10px 0;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1000;
+}
+
+.mycore-filter-dropdown {
+    position: relative;
+}
+
+.mycore-filter-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.mycore-filter-arrow {
+    font-size: 0.75rem;
+    transition: transform 0.15s;
+}
+
+.mycore-filter-toggle.open .mycore-filter-arrow {
+    transform: rotate(180deg);
+}
+
+.mycore-filter-badge {
+    background: #0073aa;
+    color: #fff;
+    border-radius: 10px;
+    padding: 1px 7px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.mycore-filter-panel {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    padding: 8px 4px;
+    min-width: 180px;
+    max-height: 260px;
+    overflow-y: auto;
+    z-index: 2000;
+}
+
+/* Options */
+.mycore-filter-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.mycore-filter-option:hover {
+    background: #f0f7fb;
+}
+
+.mycore-filter-option input[type=checkbox] {
+    accent-color: #0073aa;
+    width: 15px;
+    height: 15px;
+    flex-shrink: 0;
+}
+
+#mycore-map {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    z-index: 1;  /* Keep below WP admin bar */
+    height: 70vh !important;
+    min-height: 400px;
+}
+
+.mycore-popup {
+    min-width: 420px;
+    max-width: 480px;
+    font-size: 0.9rem;
+}
+
+.mycore-popup-thumb {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.mycore-popup-title {
+    font-size: 14px;
+    margin: 0 0 4px;
+}
+
+.mycore-popup-title a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.mycore-popup-title a:hover {
+    text-decoration: underline;
+}
+
+.mycore-popup-geo {
+    color: #666;
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+.mycore-popup-cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    margin: 2px 0;
+}
+
+.mycore-popup-cat {
+    background: #e8f0fe;
+    color: #3367d6;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.mycore-popup-image {
+    flex: 0 0 100px;  
+}
+
+.mycore-popup-image img {
+    width: 100px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.mycore-popup-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mycore-popup-content {
+    display: flex;
+    flex-direction: row;   
+    flex-wrap: nowrap;    
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.mycore-popup-link:hover {
+    text-decoration: underline;
+}
+
+.mycore-scroll-hint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1000;
+}
+
+.mycore-scroll-hint.visible {
+    opacity: 1;
+}
+
+.marker-cluster-small,
+.marker-cluster-medium {
+    background-color: rgba(0, 115, 170, 0.5);
+}
+.marker-cluster-small div,
+.marker-cluster-medium div {
+    background-color: rgba(0, 115, 170, 0.8);
+    color: #fff;
+    font-weight: 700;
+}
+.marker-cluster-large {
+    background-color: rgba(180, 60, 60, 0.5);
+}
+
+#mycore-map {
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    z-index: 1;  /* Keep below WP admin bar */
+    height: 70vh !important;
+    min-height: 400px;
+}
+
+.mycore-popup {
+    min-width: 180px;
+    max-width: 260px;
+    font-size: 0.9rem;
+}
+
+.mycore-popup-thumb {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.mycore-popup-title {
+    font-size: 1rem;
+    margin: 0 0 4px;
+}
+
+.mycore-popup-title a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.mycore-popup-title a:hover {
+    text-decoration: underline;
+}
+
+.mycore-popup-geo {
+    font-size: 0.8rem;
+    color: #666;
+    margin: 0 0 4px;
+}
+
+.mycore-popup-excerpt {
+    font-size: 0.82rem;
+    color: #444;
+    margin: 0 0 8px;
+    line-height: 1.4;
+}
+
+.mycore-popup-cats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.mycore-popup-cat {
+    background: #e8f0fe;
+    color: #3367d6;
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+.mycore-popup-link {
+    display: inline-block;
+    font-size: 0.85rem;
+    color: #0073aa;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mycore-popup-link:hover {
+    text-decoration: underline;
+}
+
+.mycore-scroll-hint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.65);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+    z-index: 1000;
+}
+
+.mycore-scroll-hint.visible {
+    opacity: 1;
+}
+
+.marker-cluster-small,
+.marker-cluster-medium {
+    background-color: rgba(0, 115, 170, 0.5);
+}
+.marker-cluster-small div,
+.marker-cluster-medium div {
+    background-color: rgba(0, 115, 170, 0.8);
+    color: #fff;
+    font-weight: 700;
+}
+.marker-cluster-large {
+    background-color: rgba(180, 60, 60, 0.5);
+}
+.marker-cluster-large div {
+    background-color: rgba(180, 60, 60, 0.8);
+    color: #fff;
+    font-weight: 700;
+}
